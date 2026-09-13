@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picverse Community - Submit Artwork</title>
+    <link rel="icon" type="image/png" href="assets/logo.jpg" />
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="submission.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-brand">
+          <h1>Picverse</h1>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="submission.html" class="active">Submit</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="submission-header">
+        <div class="particle-layer"></div>
+        <div class="grid-overlay"></div>
+        <div class="container">
+          <h1 class="fade-in">Make Your Mark</h1>
+          <p class="fade-in">
+            Contribute your unique talent to our ever-growing collection of
+            digital art
+          </p>
+        </div>
+      </section>
+
+      <section class="submission-form-section">
+        <div class="container">
+          <form id="submissionForm" class="submission-form">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required />
+              <span class="error-message" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="title">Artwork Title *</label>
+              <input type="text" id="title" name="title" required />
+              <span class="error-message" id="titleError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="description">Description *</label>
+              <textarea
+                id="description"
+                name="description"
+                rows="4"
+                required
+              ></textarea>
+              <span class="error-message" id="descriptionError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="tags">Tags</label>
+              <select id="tags" name="tags" multiple>
+                <option value="digital-painting">Digital Painting</option>
+                <option value="concept-art">Concept Art</option>
+                <option value="portrait">Portrait</option>
+                <option value="landscape">Landscape</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="abstract">Abstract</option>
+                <option value="character-design">Character Design</option>
+              </select>
+              <span class="error-message" id="tagsError"></span>
+              <small>Hold Ctrl (Cmd on Mac) to select multiple tags</small>
+            </div>
+
+            <div class="form-group">
+              <label for="artwork">Upload Artwork *</label>
+              <div class="file-upload-container">
+                <input
+                  type="file"
+                  id="artwork"
+                  name="artwork"
+                  accept="image/*"
+                  required
+                />
+                <div class="file-upload-display">
+                  <span class="file-upload-text"
+                    >Choose file or drag and drop</span
+                  >
+                  <div class="file-preview" id="filePreview"></div>
+                </div>
+              </div>
+              <span class="error-message" id="artworkError"></span>
+            </div>
+
+            <div class="form-group">
+              <fieldset>
+                <legend>Is this artwork AI-generated? *</legend>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input
+                      type="radio"
+                      name="aiGenerated"
+                      value="yes"
+                      required
+                    />
+                    <span class="radio-custom"></span>
+                    Yes, this is AI-generated
+                  </label>
+                  <label class="radio-label">
+                    <input
+                      type="radio"
+                      name="aiGenerated"
+                      value="no"
+                      required
+                    />
+                    <span class="radio-custom"></span>
+                    No, this is original artwork
+                  </label>
+                </div>
+              </fieldset>
+              <span class="error-message" id="aiGeneratedError"></span>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="submit-btn">Submit Artwork</button>
+              <button type="reset" class="reset-btn">Reset Form</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Picverse</h3>
+            <p>Get weekly highlights of top-rated art and community news.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Shortcuts</h4>
+            <ul>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="submission.html">Submit Art</a></li>
+              <li><a href="community.html">Community</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Picverse Community. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="submission.js"></script>
+  </body>
+</html>
